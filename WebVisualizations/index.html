@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Latitude</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <!-- Bootstrap Flatly
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css"> -->
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JScript for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav class="navbar p-3 mx-auto static-top navbar-expand-xl navbar-dark bg-secondary">
+        <a class="navbar-brand" href="#">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="comparisons.html">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="visualizations/vis_temp.html">Max Temperature</a>
+                        <a class="dropdown-item" href="visualizations/vis_humidity.html">Humidity</a>
+                        <a class="dropdown-item" href="visualizations/vis_cloudiness.html">Cloudiness</a>
+                        <a class="dropdown-item" href="visualizations/vis_wind.html">Wind Speed</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main" class="container">
+        <div class="parent-container d-flex">
+            <div class='row parent'>
+
+                <!-- left box -->
+                <div class="col-md-6" id='left'>
+                    <div class="container">
+                        <div class="box">
+                            <h3 class="text-center">Lattitude vs. X</h3>
+                            <hr>
+                            <div class="text-left">
+                                <div class="container mx-auto">
+                                <img src="assets/lat_temp.png" width=400 height=300 alt="Latitude v. Max Temp"
+                                    class="img-fluid float-bottom"></div>
+                                <p>The purpose of this project was to analyze the relationship, if any, between latitude
+                                    and various weather changes. To accomplish the analysis, I pulled data from the
+                                    OpenWeatherMap
+                                    API
+                                    on 500+ cities around the world. <br><br>
+
+                                    I then arranged the data using Python and graphed with Matplotlib. Analysed elements
+                                    include:
+                                    maximum temperature,
+                                    humidity, cloudiness, and wind speed. This site contains the source data and
+                                    visualizations
+                                    for
+                                    the
+                                    project, as well
+                                    as summaries/explanations of trends witnessed in the dataset.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right box (thumbnails) -->
+                <div class="col-md-6" id="right">
+                    <div class="container">
+                        <div class="box">
+                            <h3 class="text-center">Visualizations</h3>
+                            <hr>
+                            <div class="text-center">
+                                <!-- row 1 of img -->
+                                <img src="assets/lat_temp.png" width=200 height=150 alt="Latitude v. Max Temp">
+                                <img src="assets/lat_humid.png" width=200 height=150 alt="Latitude v. Humidity"><br>
+
+                                <!-- row 2 of img -->
+                                <img src="assets/lat_cloudiness.png" width=200 height=150 alt="Latitude v. Cloudiness">
+                                <img src="assets/lat_wind.png" width=200 height=150 alt="Latitude v. Wind Speed">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer container -->
+    <div class="d-flex flex-column sticky-footer-wrapper">
+        <nav class="navbar fixed-bottom navbar-light bg-light p-0">
+            <a class="navbar-text text-muted mx-auto">© A. Morrison 2019</a>
+        </nav>
+    </div>
+
+</body>
+
+</html>
