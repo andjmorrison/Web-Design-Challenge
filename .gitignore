@@ -1,7 +1,8 @@
 #resources
 
+.DS_Store
 *.DS_store
-WebVisualizations/resources/
+resources/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
