@@ -16,7 +16,7 @@
     <!-- custom CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- JScript for Bootstrap -->
+    <!-- Bootstrap script-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -26,24 +26,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        
 </head>
 
 <body>
     <!-- navigation bar -->
-    <nav class="navbar p-3 mx-auto static-top navbar-expand-xl navbar-dark bg-secondary">
-        <a class="navbar-brand" href="#">Latitude</a>
+    <nav class="navbar shadow-sm justify-content-between p-3 mb-2 mx-auto static-top navbar-expand-xl navbar-dark bg-secondary">
+        <a class="navbar navbar-brand mr-auto" href="#">Latitude</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="comparisons.html">Comparison</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="data.html">Data</a>
-                </li>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Plots
@@ -55,25 +50,32 @@
                         <a class="dropdown-item" href="visualizations/vis_wind.html">Wind Speed</a>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparisons.html">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
             </ul>
         </div>
     </nav>
+    <!--end navigation bar-->
 
     <main role="main" class="container">
         <div class="parent-container d-flex">
             <div class='row parent'>
-
+            
                 <!-- left box -->
                 <div class="col-md-6" id='left'>
                     <div class="container">
-                        <div class="box">
-                            <h3 class="text-center">Lattitude vs. X</h3>
+                        <div class="flex shadow box">
+                            <h3 class="text-center display-4">Summary: <small class='text-muted'></small>Latitude vs. X</small></h3>
                             <hr>
                             <div class="text-left">
                                 <div class="container mx-auto">
-                                <img src="assets/lat_temp.png" width=400 height=300 alt="Latitude v. Max Temp"
-                                    class="img-fluid float-bottom"></div>
-                                <p>The purpose of this project was to analyze the relationship, if any, between latitude
+                                <a href="visualizations/vis_temp.html"><img src="assets/lat_temp.png" width=600 height=450 alt="Latitude v. Max Temp"
+                                    class="img-fluid float-bottom"></a></div>
+                                <p class="lead">The purpose of this project was to analyze the relationship, if any, between latitude
                                     and various weather changes. To accomplish the analysis, I pulled data from the
                                     OpenWeatherMap
                                     API
@@ -93,21 +95,23 @@
                         </div>
                     </div>
                 </div>
+            
 
                 <!-- right box (thumbnails) -->
                 <div class="col-md-6" id="right">
                     <div class="container">
-                        <div class="box">
+                        <div class="shadow box">
                             <h3 class="text-center">Visualizations</h3>
                             <hr>
                             <div class="text-center">
+                            
                                 <!-- row 1 of img -->
-                                <img src="assets/lat_temp.png" width=200 height=150 alt="Latitude v. Max Temp">
-                                <img src="assets/lat_humid.png" width=200 height=150 alt="Latitude v. Humidity"><br>
+                                <a href="visualizations/vis_temp.html"><img src="assets/lat_temp.png" class="img-fluid" width=200 height=150 alt="Latitude v. Max Temp"></a>
+                                <a href="visualizations/vis_humidity.html"><img src="assets/lat_humid.png" width=200 height=150 alt="Latitude v. Humidity"></a><br>
 
                                 <!-- row 2 of img -->
-                                <img src="assets/lat_cloudiness.png" width=200 height=150 alt="Latitude v. Cloudiness">
-                                <img src="assets/lat_wind.png" width=200 height=150 alt="Latitude v. Wind Speed">
+                                <a href="visualizations/vis_cloudiness.html"><img src="assets/lat_cloudiness.png" width=200 height=150 alt="Latitude v. Cloudiness"></a>
+                                <a href="visualizations/vis_wind.html"><img src="assets/lat_wind.png" width=200 height=150 alt="Latitude v. Wind Speed"></a>
                             </div>
                         </div>
                     </div>

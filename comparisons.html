@@ -2,74 +2,126 @@
 <html lang="en-us">
 
 <head>
-
     <meta charset="UTF-8">
-    <title>Comparisons</title>
+    <title>Comparison</title>
 
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
+    <!-- Bootstrap Flatly
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css"> -->
+
     <!-- custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- JScript for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class='container'>
+    <!-- navigation bar -->
+    <nav
+        class="navbar shadow-sm justify-content-between p-3 mb-2 mx-auto static-top navbar-expand-xl navbar-dark bg-secondary">
+        <a class="navbar navbar-brand mr-auto" href="index.html">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="visualizations/vis_temp.html">Max Temperature</a>
+                        <a class="dropdown-item" href="visualizations/vis_humidity.html">Humidity</a>
+                        <a class="dropdown-item" href="visualizations/vis_cloudiness.html">Cloudiness</a>
+                        <a class="dropdown-item" href="visualizations/vis_wind.html">Wind Speed</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparisons.html">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
 
-        <!-- navigation bar -->
-        <nav class="navbar py-0 fixed-top navbar-expand-xl navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">Latitude</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="comparisons.html">Comparison</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="data.html">Data</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            Plots
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="visualizations/vis_temp.html">Max Temperature</a>
-                            <a class="dropdown-item" href="visualizations/vis_humidity.html">Humidity</a>
-                            <a class="dropdown-item" href="visualizations/vis_cloudiness.html">Cloudiness</a>
-                            <a class="dropdown-item" href="visualizations/vis_wind.html">Wind Speed</a>
-                        </div>
-                    </li>
-                </ul>
+            </ul>
+        </div>
+    </nav>
+    <!--end navigation bar-->
+
+    <main role="main" class="container">
+
+        <div class="shadow box mx-auto center-block" id="center">
+            <h3 class="text-center display-4">Comparison: <small class='text-muted'>Latitude vs. X</small></h3>
+            <hr>
+            <p>Select any plot below for in-depth analysis:</p>
+
+            <!-- row 1 -->
+            <div class="row center-block text-center">
+                <div class="col-md-6">
+                    <h6>Max Temp.</h6>
+                    <a href="visualizations/vis_temp.html">
+                        <figure class="figure">
+                            <img src="assets/lat_temp.png" class="figure-img img-fluid rounded" width=500 height=375
+                                alt="Latitude v. Max Temp">
+                        </figure>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <h6>Humidity</h6>
+                    <a href="visualizations/vis_humidity.html">
+                        <figure class="figure">
+                            <img src="assets/lat_humid.png" class="figure-img img-fluid rounded" width=500 height=375
+                                alt="Latitude v. Humidity">
+                        </figure>
+                    </a>
+                </div>
             </div>
+            <!-- row 2 -->
+            <div class="row center-block text-center">
+                <div class="col-md-6">
+                    <h6>Cloudiness</h6>
+                    <a href="visualizations/vis_cloudiness.html">
+                        <figure class="figure">
+                            <img src="assets/lat_cloudiness.png" class="figure-img img-fluid rounded" width=500
+                                height=375 alt="Latitude v. Cloudiness">
+                        </figure>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <h6>Wind Speed</h6>
+                    <a href="visualizations/vis_wind.html">
+                        <figure class="figure">
+                            <img src="assets/lat_wind.png" class="figure-img img-fluid rounded" width=500 height=375
+                                alt="Latitude v. Wind Speed">
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- footer container -->
+    <div class="d-flex flex-column sticky-footer-wrapper">
+        <nav class="navbar fixed-bottom navbar-light bg-light p-0">
+            <a class="navbar-text text-muted mx-auto">© A. Morrison 2019</a>
         </nav>
-
-        <p class="text-center">Center aligned text on all viewport sizes.</p>
-
     </div>
+
 </body>
 
-
-
-<nav class="navbar fixed-bottom navbar-light bg-light">
-    <a class="navbar-text mx-auto">A. Morrison 2019</a>
-</nav>
-
 </html>
-
-
-
-<!-- JScript for Bootstrap -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>

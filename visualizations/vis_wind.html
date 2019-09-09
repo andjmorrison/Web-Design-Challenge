@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wind Speed</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <!-- Bootstrap Flatly
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css"> -->
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- JScript for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav class="navbar shadow-sm justify-content-between p-3 mb-2 mx-auto static-top navbar-expand-xl navbar-dark bg-secondary">
+        <a class="navbar navbar-brand mr-auto" href="../index.html">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="vis_temp.html">Max Temperature</a>
+                        <a class="dropdown-item" href="vis_humidity.html">Humidity</a>
+                        <a class="dropdown-item" href="vis_cloudiness.html">Cloudiness</a>
+                        <a class="dropdown-item" href="vis_wind.html">Wind Speed</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../comparisons.html">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../data.html">Data</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+    <!--end navigation bar-->
+
+    <main role="main" class="container">
+        <div class="parent-container d-flex">
+            <div class='row parent'>
+
+                <!-- left box -->
+                <div class="col-md-6" id='left'>
+                    <div class="container">
+                        <div class="shadow box">
+                            <h3 class="text-center display-4">Latitude vs. Wind Speed</h3>
+                            <hr>
+                            <div class="text-left">
+                                <div class="container mx-auto">
+                                <a href="vis_wind.html"><img src="../assets/lat_wind.png" width=600 height=450 alt="Latitude v. Wind Speed"
+                                    class="img-fluid float-bottom"></a></div>
+                                <p class="lead">
+                                    Per this assortment of data, latitude does not seem to meaningfully affect wind speed, at least at the time the author gathered data.
+                                    There are some higher speeds at high positive and negative latitudes--and it does logically follow that locations at more extreme latitudes would have more extreme wind speeds--but there are not enough data points to 
+                                    assert the analytical validity of this assumption, with the vast majority of datapoints between 0-15 mph wind speed.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right box (thumbnails) -->
+                <div class="col-md-6" id="right">
+                    <div class="container">
+                        <div class="shadow box">
+                            <h3 class="text-center">Visualizations</h3>
+                            <hr>
+                            <div class="text-center">
+                                <!-- row 1 of img -->
+                                <a href="vis_temp.html"><img src="../assets/lat_temp.png" width=200 height=150 alt="Latitude v. Max Temp"></a>
+                                <a href="vis_humidity.html"><img src="../assets/lat_humid.png" width=200 height=150 alt="Latitude v. Humidity"></a><br>
+
+                                <!-- row 2 of img -->
+                                <a href="vis_cloudiness.html"><img src="../assets/lat_cloudiness.png" width=200 height=150 alt="Latitude v. Cloudiness"></a>
+                                <a href="vis_wind.html"><img src="../assets/lat_wind.png" width=200 height=150 alt="Latitude v. Wind Speed"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer container -->
+    <div class="d-flex flex-column sticky-footer-wrapper">
+        <nav class="navbar fixed-bottom navbar-light bg-light p-0">
+            <a class="navbar-text text-muted mx-auto">© A. Morrison 2019</a>
+        </nav>
+    </div>
+
+</body>
+
+</html>
